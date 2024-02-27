@@ -1,0 +1,2 @@
+- table: Product
+  sources: [Product.json]

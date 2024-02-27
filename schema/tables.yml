@@ -1,0 +1,37 @@
+Tables:
+  - TableName: Product
+    AttributeDefinitions:
+      - AttributeName: id
+        AttributeType: S
+      - AttributeName: name
+        AttributeType: S
+      - AttributeName: category
+        AttributeType: S
+      - AttributeName: price
+        AttributeType: N 
+    KeySchema:
+      - AttributeName: id
+        KeyType: HASH
+    BillingMode: PAY_PER_REQUEST
+    GlobalSecondaryIndexes:
+      - IndexName: NameIndex
+        KeySchema:
+          - AttributeName: name
+            KeyType: HASH
+        Projection:
+          ProjectionType: ALL
+      - IndexName: CategoryIndex
+        KeySchema:
+          - AttributeName: category
+            KeyType: HASH
+        Projection:
+          ProjectionType: ALL
+      - IndexName: PriceIndex
+        KeySchema:
+          - AttributeName: category
+            KeyType: HASH
+          - AttributeName: price
+            KeyType: RANGE
+        Projection:
+          ProjectionType: INCLUDE
+          NonKeyAttributes: [ "name", "price" ] 

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "product1",
+    "name": "Laptop Pro 15",
+    "category": "Electronics",
+    "price": 1500
+  },
+  {
+    "id": "product2",
+    "name": "Smartphone X2",
+    "category": "Electronics",
+    "price": 700
+  },
+  {
+    "id": "product3",
+    "name": "Coffee Maker Basic",
+    "category": "Home Appliances",
+    "price": 80
+  },
+  {
+    "id": "product4",
+    "name": "Electric Kettle Pro",
+    "category": "Home Appliances",
+    "price": 120
+  },
+  {
+    "id": "product5",
+    "name": "Acoustic Guitar",
+    "category": "Musical Instruments",
+    "price": 450
+  }
+]
